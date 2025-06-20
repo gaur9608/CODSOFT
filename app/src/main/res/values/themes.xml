@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+    <style name="Base.Theme.InspireDaily" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Apply custom popup menu style -->
+        <item name="popupMenuStyle">@style/CustomPopupMenu</item>
+    </style>
+
+    <style name="Theme.InspireDaily" parent="Base.Theme.InspireDaily" />
+
+    <!-- Custom popup style -->
+    <style name="CustomPopupMenu" parent="Widget.MaterialComponents.PopupMenu">
+        <item name="android:popupBackground">@drawable/popup_background</item>
+        <item name="android:textColor">@color/menu_text_color</item>
+    </style>
+
+</resources>
