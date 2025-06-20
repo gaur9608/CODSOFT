@@ -56,7 +56,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.View
             favorites.remove(position);
             notifyItemRemoved(position);
 
-            // Also remove from SharedPreferences
+
             SharedPreferences prefs = context.getSharedPreferences("InspireDailyPrefs", Context.MODE_PRIVATE);
             Set<String> favoritesSet = new HashSet<>(prefs.getStringSet("favorites", new HashSet<>()));
             favoritesSet.remove(quoteToRemove);

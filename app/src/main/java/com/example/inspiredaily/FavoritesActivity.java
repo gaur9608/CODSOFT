@@ -35,7 +35,7 @@ public class FavoritesActivity extends AppCompatActivity {
         adapter = new FavoritesAdapter(this, favoriteQuotes);
         recyclerView.setAdapter(adapter);
 
-        // Enable swipe to delete
+
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             @Override
             public boolean onMove(RecyclerView rv, RecyclerView.ViewHolder vh, RecyclerView.ViewHolder target) {
@@ -48,7 +48,7 @@ public class FavoritesActivity extends AppCompatActivity {
 
                 adapter.removeItem(position);
 
-                // Save back to SharedPreferences
+
                 SharedPreferences.Editor editor = prefs.edit();
                 editor.putStringSet("favorites", new HashSet<>(adapter.getFavorites()));
                 editor.apply();
